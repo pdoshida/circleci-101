@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run: echo "A more familiar hi"
       - run: sleep 1
-      - run: sh curl ifconfig.io
+      - run: curl ifconfig.io
 workflows:
   version: 2
   one_and_two:
