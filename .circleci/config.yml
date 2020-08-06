@@ -6,15 +6,14 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello"
-      - run: sleep 1
-      - run: ifconfig
+      - run: ps -ef
+      - run: df -h
   two:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A more familiar hi"
-      - run: sleep 1
       - run: curl ifconfig.io
 workflows:
   version: 2
